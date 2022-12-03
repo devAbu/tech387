@@ -5,6 +5,10 @@ const authRouter = require("./routes/auth");
 const app = express();
 const PORT = 3000;
 
+var cors = require("cors");
+
+app.use(cors()); // Use this after the variable declaration
+
 app.use(express.json());
 const DB =
   "mongodb+srv://abu:aburefko159753@cluster0.nuc5xkg.mongodb.net/?retryWrites=true&w=majority";
